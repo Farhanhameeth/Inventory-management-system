@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="372.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dev.pos.controller.OrderDetailsFormController">
+   <children>
+      <Label layoutX="28.0" layoutY="24.0" text="Order Details">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Separator layoutX="26.0" layoutY="52.0" prefHeight="14.0" prefWidth="822.0" />
+      <Button layoutX="688.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="26.0" prefWidth="160.0" style="-fx-background-color: #e74c3c;" text="Back" textFill="#fcf9f9">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView fx:id="tblOrderDetails" layoutX="26.0" layoutY="86.0" prefHeight="238.0" prefWidth="822.0">
+         <columns>
+            <TableColumn fx:id="colProductCode" prefWidth="108.0" text="Product Code" />
+            <TableColumn fx:id="colProductName" prefWidth="179.0" text="Product Name" />
+            <TableColumn fx:id="colBatchCode" minWidth="0.0" prefWidth="127.0" text="Batch Code" />
+            <TableColumn fx:id="colQuantity" prefWidth="108.0" text="Quantity" />
+            <TableColumn fx:id="colDiscount" minWidth="0.0" prefWidth="176.0" text="Discount" />
+            <TableColumn fx:id="colAmount" prefWidth="123.0" text="Amount" />
+         </columns>
+      </TableView>
+      <Label layoutX="642.0" layoutY="338.0" text="Total Cost : " textFill="#f81212">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotalCost" layoutX="736.0" layoutY="338.0" text="0.0/=">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
